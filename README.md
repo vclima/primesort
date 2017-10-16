@@ -1,46 +1,28 @@
-# Um pequeno somador
+# PrimeSort
 
-Esta é uma tarefa-template, que deve ser modificada para ser convertida em
-outras atividades. Aqui, fica o enunciado da tarefa, ou seja, sua descrição, com
-instruções claras sobre o problema que deve ser resolvido. Esta tarefa consiste
-em fazer um somador. Ele deverá receber uma linha de texto contendo dois números
-inteiros. Essa linha se encerra com caractere fim de linha `\n`. O programa
-deverá imprimir na saída padrão a soma desses dois números
+Esta tarefa é sobre usar *pipes* e *ferramentas do Linux*. Nela, você deverá escrever
+um prorama que recebe como entrada uma sequência de números inteiros positivos,
+separados por um caractere newline. A sequência é encerrada pelo número 0. O
+programa deve escrever na tela todos os números não-primos dessa sequência,
+ordenados do menor para o maior.
 
-## Como fazer uma outra tarefa usando este template
-1. Crie um repositório vazio no Github (sem inicializar o readme nem a licença)
-   com o nome da sua tarefa usando a interface web. Vamos chamar esse
-   repositório com o nome fantasma de `foobar`.
-
-1. Faça um clone deste repositório para um diretório com o nome de sua tarefa.
-   Se sua tarefa se chama foobar, então a linha de comando é:
-   `git clone https://github.com/Beethoven-ED/template_unit_test.git foobar`
-
-1. Desvincule sua cópia local deste repositório:
-   `git remote remove origin`
-
-1. Vincule sua cópia local ao seu repositório no github:
-   `git remote add origin https://github.com/seu_username/foobar.git`
-
-1. Faça as modificações necessárias no código. Use `git add` e `git commit`
-   sempre que necessário. Lembre-se de:
-   * Modificar o enunciado
-   * Adicionar testes de unidade
-   * Adicionar um programa-template, se achar necessário.
-   * Testar se `make` e `make test` estão funcionando adequadamente.
-
-1. Quando terminar, envie suas modificações ao repositório: `git push
-   --set-upstream origin master` (a flag `--set-upstream origin master` só será
-   necessária da primeira vez que fizer o `push`).
-
-1. Verifique se as modificações estão todas no Github, no endereço correto.
+Dicas:
+* Um número primo é aquele que tem exatamente dois divisores inteiros (ele mesmo
+  e algum outro inteiro). O número 1 não é primo, pois tem apenas um divisor
+  inteiro.
+* Lembre-se da função `popen()` que vimos em sala, e das ferramentas POSIX que
+  temos disponíveis (`grep`, `cat`, `echo`, `sort`, `sed`, `tr`, `top`, etc.).
+  Embora seja tecnicamente possível implementar o algoritmo inteiro com força
+  bruta, é uma ótima idéia usar as funcionalidades que já existem disponíveis.
+* O programa deverá ser escrito em C (ou seja: não é permitido usar
+  um shell script único)
 
 ## Exemplos
 
 Entrada | Saida
 ------- | -----
-`1 2` | `3`
-`100 1` | `101`
+`1\n2\n3\n0\n` | `1\n`
+`10\n8\n4\n5\n3\n1\n0\n` | `10\n8\n4\n1\n`
 
 
 ## Instruções adicionais
