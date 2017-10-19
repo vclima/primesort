@@ -2,9 +2,9 @@
 
 Esta tarefa é sobre usar *pipes* e *ferramentas do Linux*. Nela, você deverá escrever
 um prorama que recebe como entrada uma sequência de números inteiros positivos,
-separados por um caractere newline. A sequência é encerrada pelo número 0. O
-programa deve escrever na tela todos os números não-primos dessa sequência,
-ordenados do menor para o maior.
+separados por um caractere newline. A sequência é encerrada pelo número -1. O
+programa deve escrever na tela todos os números não-primos dessa sequência, um
+por linha ordenados do maior para o menor.
 
 Dicas:
 * Um número primo é aquele que tem exatamente dois divisores inteiros (ele mesmo
@@ -16,6 +16,9 @@ Dicas:
   bruta, é uma ótima idéia usar as funcionalidades que já existem disponíveis.
 * O programa deverá ser escrito em C (ou seja: não é permitido usar
   um shell script único)
+* A execução de cada teste está sujeita a um limite de tempo de 10 segundos (a
+  máquina na qual estou executando os programas tem um processador Core i7 de
+  3.0GHz)
 
 ## Exemplos
 

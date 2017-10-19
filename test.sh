@@ -2,6 +2,7 @@
 
 # Configuracao: escolhe se o programa retonara mensagens teste-a-teste
 verbose=$2
+time_cap=10.0
 
 # A primeira linha indica que o script foi inicializado corretamente
 if [ $verbose -eq 1 ]; then
@@ -34,7 +35,7 @@ do
 
   # Executa o programa que foi compilado usando o arquivo de teste.in como
   # entrada
-  $program < $t > ./$$.out
+  timeout $time_cap $program < $t > ./$$.out
 
   # Verifica se a diferenca entre a saida encontrada e a saida desejada
   # eh uma string de comprimento nao-zero
