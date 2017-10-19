@@ -24,8 +24,8 @@ Dicas:
 
 Entrada | Saida
 ------- | -----
-`1\n2\n3\n0\n` | `1\n`
-`10\n8\n4\n5\n3\n1\n0\n` | `10\n8\n4\n1\n`
+`1\n2\n3\n-1\n` | `1\n`
+`10\n8\n4\n5\n3\n1\n-1\n` | `10\n8\n4\n1\n`
 
 
 ## Instruções adicionais
