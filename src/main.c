@@ -7,12 +7,18 @@
 
 #include <stdio.h>
 #include <math.h>
-#define MAXIMO 50000
+#define MAXIMO 500000
 
 int primo(int testar){
   int i,lim;
   lim=sqrt(testar);
-  if(testar%2==0){
+  if(testar==1){
+    return 1;
+  }
+  else if(testar==2){
+    return -1;
+  }
+  else if(testar%2==0){
     return testar;
   }
   for(i=3;i<=lim;i=i+2){
@@ -40,15 +46,11 @@ int main() {
   for(i=0;i<tamanho;i++){
     aux=primo(entrada[i]);
     if(aux>0){
-      printf("%d",aux);
       np[j]=aux;
       j++;
     }
   }
-  for(i=0;i<j;i++){
-    printf("%d\n",np[i]);
-  }
-  out=popen("sort -n","w");
+  out=popen("sort -n -r","w");
   if(out!=NULL){
     for(i=0;i<j;i++){
       fprintf(out,"%d\n",np[i]);
