@@ -7,6 +7,7 @@
 
 #include <stdio.h>
 #include <math.h>
+#define MAXIMO 50000
 
 int primo(int testar){
   int i,lim;
@@ -24,15 +25,15 @@ int primo(int testar){
 
 int main() {
 
-  int entrada[500000];
-  int np[500000];
+  int entrada[MAXIMO];
+  int np[MAXIMO];
   int i,tamanho,j,aux;
   FILE *out;
-  i=0;
-  scanf("%d\n",&entrada[i]);
-  while(entrada[i]>0);{
-    i++;
-    scanf("%d\n",&entrada[i]); //a
+  for(i=0;i<MAXIMO;i++){
+    scanf("%d",&entrada[i]);
+    if(entrada[i]<0){
+        break;
+    }
   }
   tamanho=i;
   j=0;
